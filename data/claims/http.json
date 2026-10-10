@@ -1,0 +1,125 @@
+{
+  "description": "HTTP claims checked by hand against the RFC text. Each claim cites the RFC it was read from; inferences name their premises.",
+  "nodes": [
+    {
+      "id": "http/referer/request-header",
+      "kind": "claim",
+      "title": "Referer is a request header field",
+      "statement": "Referer is a request header field: HTTP Semantics defines it among the request context fields, which give information about the context of the request.",
+      "status": "established",
+      "sourceURL": "https://www.rfc-editor.org/rfc/rfc9110#section-10.1.3",
+      "sourceLocator": "RFC 9110 Section 10.1 (Request Context Fields), 10.1.3 (Referer)",
+      "scope": { "protocol": "HTTP" },
+      "aliases": ["Referer", "Referer header", "referrer", "referrer header", "리퍼러", "리퍼러 헤더"],
+      "cites": ["rfc9110"],
+      "supersedes": ["http/referer/request-header@rfc7231"]
+    },
+    {
+      "id": "http/referer/request-header@rfc7231",
+      "kind": "claim",
+      "title": "Referer is a request header field (RFC 7231)",
+      "statement": "RFC 7231 Section 5.5.2 defined the Referer header field under Request Context.",
+      "status": "superseded",
+      "sourceURL": "https://www.rfc-editor.org/rfc/rfc7231#section-5.5.2",
+      "sourceLocator": "RFC 7231 Section 5.5 (Request Context), 5.5.2 (Referer)",
+      "scope": { "protocol": "HTTP/1.1" },
+      "cites": ["rfc7231"]
+    },
+    {
+      "id": "http/referer/misspelling",
+      "kind": "claim",
+      "title": "The Referer field name is a misspelling of referrer",
+      "statement": "The specification writes the field as \"Referer\" [sic] and states that it names the \"referrer\", though the field name is misspelled. The misspelled name is the one defined.",
+      "status": "established",
+      "sourceURL": "https://www.rfc-editor.org/rfc/rfc9110#section-10.1.3",
+      "sourceLocator": "RFC 9110 Section 10.1.3 (Referer)",
+      "scope": { "protocol": "HTTP" },
+      "aliases": ["Referer spelling", "Referer misspelling", "referer vs referrer", "referrer spelling", "리퍼러 철자", "referer 오타"],
+      "cites": ["rfc9110"]
+    },
+    {
+      "id": "http/referer/defined-in-http-1.0",
+      "kind": "claim",
+      "title": "HTTP/1.0 already defined Referer with the same spelling",
+      "statement": "HTTP/1.0 (RFC 1945, May 1996) defines \"Referer\" as a request-header field with the same spelling.",
+      "status": "established",
+      "sourceURL": "https://www.rfc-editor.org/rfc/rfc1945#section-10.13",
+      "sourceLocator": "RFC 1945 Section 10.13 (Referer)",
+      "scope": { "protocol": "HTTP/1.0" },
+      "aliases": ["Referer HTTP/1.0", "Referer history", "Referer origin"],
+      "cites": ["rfc1945"]
+    },
+    {
+      "id": "http/referer/spelling-carried-forward",
+      "kind": "inference",
+      "title": "The misspelled name has been kept from HTTP/1.0 to current HTTP",
+      "statement": "Because HTTP/1.0 defined the field as \"Referer\" and current HTTP Semantics still defines it under that name while noting the misspelling, the field has kept the misspelled name from 1996 to today. The specifications do not state a reason for keeping it; any reason given beyond this is not backed by these sources.",
+      "status": "established",
+      "scope": { "protocol": "HTTP" },
+      "aliases": ["why Referer not referrer", "Referer 왜 오타", "referer 왜 referrer 아님"],
+      "premises": ["http/referer/defined-in-http-1.0", "http/referer/misspelling"]
+    },
+    {
+      "id": "http/methods/safe",
+      "kind": "claim",
+      "title": "GET, HEAD, OPTIONS and TRACE are the safe methods",
+      "statement": "Of the request methods defined by HTTP Semantics, GET, HEAD, OPTIONS, and TRACE are defined to be safe: their defined semantics are essentially read-only.",
+      "status": "established",
+      "sourceURL": "https://www.rfc-editor.org/rfc/rfc9110#section-9.2.1",
+      "sourceLocator": "RFC 9110 Section 9.2.1 (Safe Methods)",
+      "scope": { "protocol": "HTTP" },
+      "aliases": ["safe methods", "safe method", "안전한 메서드"],
+      "cites": ["rfc9110"],
+      "supersedes": ["http/methods/safe@rfc7231"]
+    },
+    {
+      "id": "http/methods/safe@rfc7231",
+      "kind": "claim",
+      "title": "GET, HEAD, OPTIONS and TRACE are the safe methods (RFC 7231)",
+      "statement": "RFC 7231 defined GET, HEAD, OPTIONS, and TRACE as safe.",
+      "status": "superseded",
+      "sourceURL": "https://www.rfc-editor.org/rfc/rfc7231#section-4.2.1",
+      "sourceLocator": "RFC 7231 Section 4.2.1 (Safe Methods)",
+      "scope": { "protocol": "HTTP/1.1" },
+      "cites": ["rfc7231"]
+    },
+    {
+      "id": "http/methods/idempotent",
+      "kind": "claim",
+      "title": "PUT, DELETE and the safe methods are idempotent",
+      "statement": "A method is idempotent if the intended effect of several identical requests is the same as one. Of the methods defined by HTTP Semantics, PUT, DELETE, and the safe methods are idempotent.",
+      "status": "established",
+      "sourceURL": "https://www.rfc-editor.org/rfc/rfc9110#section-9.2.2",
+      "sourceLocator": "RFC 9110 Section 9.2.2 (Idempotent Methods)",
+      "scope": { "protocol": "HTTP" },
+      "aliases": ["idempotent methods", "idempotent", "is PUT idempotent", "PUT idempotent", "멱등", "멱등 메서드", "PUT 멱등"],
+      "cites": ["rfc9110"],
+      "premises": ["http/methods/safe"],
+      "supersedes": ["http/methods/idempotent@rfc7231"]
+    },
+    {
+      "id": "http/methods/idempotent@rfc7231",
+      "kind": "claim",
+      "title": "PUT, DELETE and the safe methods are idempotent (RFC 7231)",
+      "statement": "RFC 7231 defined PUT, DELETE, and safe request methods as idempotent.",
+      "status": "superseded",
+      "sourceURL": "https://www.rfc-editor.org/rfc/rfc7231#section-4.2.2",
+      "sourceLocator": "RFC 7231 Section 4.2.2 (Idempotent Methods)",
+      "scope": { "protocol": "HTTP/1.1" },
+      "cites": ["rfc7231"]
+    },
+    {
+      "id": "http/methods/idempotent-retry",
+      "kind": "claim",
+      "title": "Idempotent requests can be retried automatically",
+      "statement": "Idempotent requests can be repeated automatically if the connection fails before the client reads the response, because repeating them has the same intended effect.",
+      "status": "established",
+      "sourceURL": "https://www.rfc-editor.org/rfc/rfc9110#section-9.2.2",
+      "sourceLocator": "RFC 9110 Section 9.2.2 (Idempotent Methods)",
+      "scope": { "protocol": "HTTP" },
+      "aliases": ["retry idempotent request", "automatic retry", "재시도"],
+      "cites": ["rfc9110"],
+      "premises": ["http/methods/idempotent"]
+    }
+  ]
+}
