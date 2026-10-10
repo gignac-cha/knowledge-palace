@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rfc-index xmlns="https://www.rfc-editor.org/rfc-index">
+  <!-- RFC 1945, 7231 and 9110 copied from https://www.rfc-editor.org/rfc-index.xml (2026-10-10), format and errata elements removed. -->
+  <rfc-entry>
+    <doc-id>RFC1945</doc-id>
+    <title>Hypertext Transfer Protocol -- HTTP/1.0</title>
+    <author>
+      <name>T. Berners-Lee</name>
+    </author>
+    <author>
+      <name>R. Fielding</name>
+    </author>
+    <author>
+      <name>H. Frystyk</name>
+    </author>
+    <date>
+      <month>May</month>
+      <year>1996</year>
+    </date>
+    <page-count>60</page-count>
+    <keywords>
+      <kw>HTTP-1.0</kw>
+      <kw>HTTP</kw>
+      <kw>World-Wide</kw>
+      <kw>Web</kw>
+      <kw>application</kw>
+    </keywords>
+    <abstract>
+      <p>The Hypertext Transfer Protocol (HTTP) is an application-level protocol with the lightness and speed necessary for distributed, collaborative, hypermedia information systems.  This memo provides information for the Internet community.  This memo does not specify an Internet standard of any kind.</p>
+    </abstract>
+    <draft>draft-ietf-http-v10-spec-04</draft>
+    <current-status>INFORMATIONAL</current-status>
+    <publication-status>INFORMATIONAL</publication-status>
+    <stream>IETF</stream>
+    <area>app</area>
+    <wg_acronym>http</wg_acronym>
+    <doi>10.17487/RFC1945</doi>
+  </rfc-entry>
+  <rfc-entry>
+    <doc-id>RFC7231</doc-id>
+    <title>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</title>
+    <author>
+      <name>R. Fielding</name>
+      <title>Editor</title>
+    </author>
+    <author>
+      <name>J. Reschke</name>
+      <title>Editor</title>
+    </author>
+    <date>
+      <month>June</month>
+      <year>2014</year>
+    </date>
+    <page-count>101</page-count>
+    <keywords>
+      <kw>Hypertext Transfer Protocol</kw>
+      <kw>HTTP</kw>
+      <kw>HTTP semantics</kw>
+      <kw>HTTP payload</kw>
+      <kw>HTTP content</kw>
+      <kw>HTTP method</kw>
+      <kw>HTTP status code</kw>
+    </keywords>
+    <abstract>
+      <p>The Hypertext Transfer Protocol (HTTP) is a stateless \%application- level protocol for distributed, collaborative, hypertext information systems.  This document defines the semantics of HTTP/1.1 messages, as expressed by request methods, request header fields, response status codes, and response header fields, along with the payload of messages (metadata and body content) and mechanisms for content negotiation.</p>
+    </abstract>
+    <draft>draft-ietf-httpbis-p2-semantics-26</draft>
+    <obsoletes>
+      <doc-id>RFC2616</doc-id>
+    </obsoletes>
+    <obsoleted-by>
+      <doc-id>RFC9110</doc-id>
+    </obsoleted-by>
+    <updates>
+      <doc-id>RFC2817</doc-id>
+    </updates>
+    <current-status>PROPOSED STANDARD</current-status>
+    <publication-status>PROPOSED STANDARD</publication-status>
+    <stream>IETF</stream>
+    <area>wit</area>
+    <wg_acronym>httpbis</wg_acronym>
+    <doi>10.17487/RFC7231</doi>
+  </rfc-entry>
+  <rfc-entry>
+    <doc-id>RFC9110</doc-id>
+    <title>HTTP Semantics</title>
+    <author>
+      <name>R. Fielding</name>
+      <title>Editor</title>
+    </author>
+    <author>
+      <name>M. Nottingham</name>
+      <title>Editor</title>
+    </author>
+    <author>
+      <name>J. Reschke</name>
+      <title>Editor</title>
+    </author>
+    <date>
+      <month>June</month>
+      <year>2022</year>
+    </date>
+    <page-count>194</page-count>
+    <keywords>
+      <kw>Hypertext Transfer Protocol</kw>
+      <kw>HTTP</kw>
+      <kw>HTTP semantics</kw>
+      <kw>HTTP content</kw>
+      <kw>HTTP method</kw>
+      <kw>HTTP status code</kw>
+    </keywords>
+    <abstract>
+      <p>The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibility mechanisms, and the "http" and "https" Uniform Resource Identifier (URI) schemes.</p>
+      <p>This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230.</p>
+    </abstract>
+    <draft>draft-ietf-httpbis-semantics-19</draft>
+    <is-also>
+      <doc-id>STD97</doc-id>
+    </is-also>
+    <obsoletes>
+      <doc-id>RFC2818</doc-id>
+      <doc-id>RFC7230</doc-id>
+      <doc-id>RFC7231</doc-id>
+      <doc-id>RFC7232</doc-id>
+      <doc-id>RFC7233</doc-id>
+      <doc-id>RFC7235</doc-id>
+      <doc-id>RFC7538</doc-id>
+      <doc-id>RFC7615</doc-id>
+      <doc-id>RFC7694</doc-id>
+    </obsoletes>
+    <updates>
+      <doc-id>RFC3864</doc-id>
+    </updates>
+    <current-status>INTERNET STANDARD</current-status>
+    <publication-status>INTERNET STANDARD</publication-status>
+    <stream>IETF</stream>
+    <area>wit</area>
+    <wg_acronym>httpbis</wg_acronym>
+    <doi>10.17487/RFC9110</doi>
+  </rfc-entry>
+</rfc-index>

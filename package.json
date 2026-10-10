@@ -1,0 +1,37 @@
+{
+  "name": "knowledge-palace",
+  "version": "0.1.0",
+  "description": "A graph of sourced claims with premise hashes and impact recompute, served to AI agents over MCP",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=25"
+  },
+  "scripts": {
+    "setup": "pnpm run import:rfc && pnpm run load:claims",
+    "import:rfc": "node sources/cli.ts import-rfc",
+    "load:claims": "node sources/cli.ts load-claims",
+    "stale": "node sources/cli.ts stale",
+    "server": "node sources/server/main.ts",
+    "typecheck": "tsc --project tsconfig.json",
+    "test": "node --test 'tests/**/*.test.ts'"
+  },
+  "keywords": [
+    "mcp",
+    "knowledge-graph",
+    "rfc",
+    "merkle-dag"
+  ],
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.0",
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.3.1",
+    "fast-xml-parser": "^5.11.2",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.3.1",
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  }
+}
